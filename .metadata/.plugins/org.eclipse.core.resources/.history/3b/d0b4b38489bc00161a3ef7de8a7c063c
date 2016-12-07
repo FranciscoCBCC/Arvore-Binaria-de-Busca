@@ -1,0 +1,28 @@
+package ArvoreBinariaBusca;
+
+
+
+
+public class Main {
+
+	public static void menu(){
+		System.out.println("1 - Inserir");
+		System.out.println("2 - Imprimir");
+		System.out.println("3 - Buscar");
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		menu();
+		Arvore arvoreBinBusca = new Arvore();
+		
+		
+		arvoreBinBusca.inserir(40);
+		arvoreBinBusca.inserir(46);
+		
+		arvoreBinBusca.imprimirArvore();
+		
+
+	}
+
+}

@@ -21,24 +21,26 @@ public class Main {
             opcao = entrada.nextInt();
             
             switch(opcao){             
-            	case 1:
-            		System.out.println("Digite o valor  ser inserido:");
-            		int valor = 0;
-            		Scanner inserirValor = new Scanner(System.in);
-            		arvoreBinBusca.inserir(valor);
-            		break;
+            case 1:
+            	System.out.println("Digite o valor  ser inserido:");
+            	int valor = 0;
+            	Scanner inserirValor = new Scanner(System.in);
+                arvoreBinBusca.inserir(valor);
+                break;
                 
-            	case 2:
-            		arvoreBinBusca.imprimirArvore();
-            		break;
-            		
-            	case 3:
-            		System.out.println("Buscar não implementado");
-                                    	
-            	default:
-            		System.out.println("Opção inválida");
-            		break;
-            }            
+            case 2:
+            	arvoreBinBusca.imprimirArvore();
+            	break;
+            	
+            case 3:
+            	System.out.println("Buscar não implementado");
+            	
+            
+            	
+            default:
+            	System.out.println("Opção inválida");
+            	break;
+            }
         }while(true);
 
 	}

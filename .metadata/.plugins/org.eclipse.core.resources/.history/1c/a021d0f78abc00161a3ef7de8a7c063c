@@ -16,12 +16,14 @@ public class Main {
 		int opcao;
         Scanner entrada = new Scanner(System.in);
         Arvore arvoreBinBusca = new Arvore();
+        menu();
+        opcao = entrada.nextInt();
         do{
-            menu();
-            opcao = entrada.nextInt();
+            
             
             switch(opcao){             
             	case 1:
+            		
             		System.out.println("Digite o valor  ser inserido:");
             		int valor = 0;
             		Scanner inserirValor = new Scanner(System.in);
@@ -31,14 +33,15 @@ public class Main {
             	case 2:
             		arvoreBinBusca.imprimirArvore();
             		break;
-            		
+            	
             	case 3:
             		System.out.println("Buscar não implementado");
                                     	
             	default:
             		System.out.println("Opção inválida");
             		break;
-            }            
+            }
+            
         }while(true);
 
 	}
