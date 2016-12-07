@@ -1,25 +1,29 @@
 package ArvoreBinariaBusca;
 
 public class Arvore{
-	private Node root;
+	private Node raiz;
 
-    public boolean isEmpty(){
-        if(root == null){
+	public Arvore(){
+		System.out.println("Árvore Criada.");
+	}
+	
+	public boolean estaVazia(){
+        if(raiz == null){
             return true;
         }
         return false;
     }
     
-    public int getAltura(){
-        return getAltura(this.root);
+    /*public int getAltura(){
+        return getAltura(this.raiz);
     }
     
-    private int getAltura(Node root){
-        if(root == null){
+    private int getAltura(Node raiz){
+        if(raiz == null){
             return 0;
         }
-        int altEsq = getAltura(root.getLeft());
-        int altDir = getAltura(root.getRight());
+        int altEsq = getAltura(raiz.getLeft());
+        int altDir = getAltura(raiz.getRight());
         if(altEsq > altDir){
             return altEsq + 1;
         } else {
@@ -28,23 +32,24 @@ public class Arvore{
     }
     
     public int getQtdNode(){
-        return getQtdNode(root);
+        return getQtdNode(raiz);
     }
     
-    private int getQtdNode(Node root){
-        if(root == null){
+    private int getQtdNode(Node raiz){
+        if(raiz == null){
             return 0;
         }
-        int qtdNodeEsq = getQtdNode(root.getLeft());
-        int qtdNodeDireita = getQtdNode(root.getRight());
+        int qtdNodeEsq = getQtdNode(raiz.getLeft());
+        int qtdNodeDireita = getQtdNode(raiz.getRight());
         return qtdNodeEsq + qtdNodeDireita + 1;
     }
+    */
     
     public void imprimirArvore(){
-        if(this.root == null)
+        if(this.raiz == null)
             System.out.println("Árvore vazia");
         else
-            imprimirArvore(this.root);
+            imprimirArvore(this.raiz);
     }
     
     private void imprimirArvore(Node node){
@@ -58,12 +63,12 @@ public class Arvore{
     }
     
     public void inserir(int valor){
-        inserir(this.root, valor);
+        inserir(this.raiz, valor);
     }
     
     public void inserir(Node node, int valor) {
-        if(this.root == null){
-            this.root = new Node(valor);
+        if(this.raiz == null){
+            this.raiz = new Node(valor);
         } else {
             if (valor < node.getValor()) {
                 if (node.getLeft() != null) { 
@@ -85,12 +90,14 @@ public class Arvore{
         }
     }
     
+    /*
     public Node remover(int valor) throws Exception{
-        return remover(this.root, valor);
+        return remover(this.raiz, valor);
     }
-    
+    */
+    /*
     private Node remover(Node node, int valor) throws Exception{
-        if(this.root == null){
+        if(this.raiz == null){
             throw new Exception("Árvore vazia");
         } else {            
             if(valor < node.getValor()){
@@ -98,7 +105,7 @@ public class Arvore{
             } else if(valor > node.getValor()){
                 node.setright(remover(node.getRight(), valor));
             } else if (node.getLeft() != null && node.getRight() != null) {
-                /*2 filhos*/  
+                //2 filhos  
                 System.out.println("  Removeu No " + node.getValor());
                 node.setValor(encontraMinimo(node.getRight()).getValor());
                 node.setright(removeMinimo(node.getRight()));
@@ -108,8 +115,12 @@ public class Arvore{
             }  
             return node;
         }
+        
     }
+    */
     
+    
+    /*
     private Node removeMinimo(Node node) {  
         if (node == null) {  
             System.out.println("  ERRO ");  
@@ -130,4 +141,5 @@ public class Arvore{
         }  
         return node;  
     }
+    */
 }

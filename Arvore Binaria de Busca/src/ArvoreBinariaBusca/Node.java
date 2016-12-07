@@ -10,7 +10,7 @@ public class Node  {
         this.valor = valor;
     }
     
-    public boolean isLeaf() {
+    public boolean ehFolha() {
         return left == null && right == null;
     }
     // funçoes set

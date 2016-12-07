@@ -1,8 +1,8 @@
 INDEX VERSION 1.129+C:\Users\Francisco Junior\Desktop\Arvore-Binaria-de-Busca\.metadata\.plugins\org.eclipse.jdt.core
 2017505986.index
 910147984.index
-486699731.index
 2167310551.index
+486699731.index
 375126478.index
 2927524569.index
 2312443017.index
