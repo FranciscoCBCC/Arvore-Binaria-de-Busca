@@ -36,11 +36,7 @@ public class Main {
             		break;
             		
             	case 3:
-            		System.out.println("Digite o valor  ser pesquisado:");
-            		int buscaValor = 0;
-            		Scanner buscarValor = new Scanner(System.in);
-            		buscaValor = buscarValor.nextInt();
-            		arvoreBinBusca.busca(buscaValor);
+            		System.out.println("Buscar não implementado");
             		pause.nextLine();
                     break;               	
             	default:

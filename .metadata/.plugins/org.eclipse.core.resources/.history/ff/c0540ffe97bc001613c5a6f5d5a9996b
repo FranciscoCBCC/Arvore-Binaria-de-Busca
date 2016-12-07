@@ -1,24 +1,24 @@
 package ArvoreBinariaBusca;
 
 public class Arvore{
-	private Node raiz;  //Raiz da árvore
+	private Node raiz;
 
 	public Arvore(){
-		System.out.println("Árvore Criada."); //Construtor sem parâmetro
+		System.out.println("Árvore Criada.");
 	}
 	
-	public boolean estaVazia(){  //Verifica se a árvore está vazia
+	public boolean estaVazia(){
         if(raiz == null){
             return true;
         }
         return false;
     }
     
-    public int getAltura(){ //Método que retorna a altura  da árvore
+    /*public int getAltura(){
         return getAltura(this.raiz);
     }
     
-    private int getAltura(Node raiz){  //Método que retorna a altura da árvore
+    private int getAltura(Node raiz){
         if(raiz == null){
             return 0;
         }
@@ -31,11 +31,11 @@ public class Arvore{
         }
     }
     
-    public int getQtdNode(){  //Método que retorna a quantidade de nós
+    public int getQtdNode(){
         return getQtdNode(raiz);
     }
     
-    private int getQtdNode(Node raiz){  //Método que retorna a quantidade de nós
+    private int getQtdNode(Node raiz){
         if(raiz == null){
             return 0;
         }
@@ -43,16 +43,16 @@ public class Arvore{
         int qtdNodeDireita = getQtdNode(raiz.getRight());
         return qtdNodeEsq + qtdNodeDireita + 1;
     }
+    */
     
-    
-    public void imprimirArvore(){  //Imprime a árvore
+    public void imprimirArvore(){
         if(this.raiz == null)
             System.out.println("Árvore vazia");
         else
             imprimirArvore(this.raiz);
     }
     
-    private void imprimirArvore(Node node){  //Método que percorre a árvore para imprimí-la
+    private void imprimirArvore(Node node){
         if(node.getLeft() != null){
             imprimirArvore(node.getLeft());
         }
@@ -62,11 +62,11 @@ public class Arvore{
         System.out.println("Nó: " + node.getValor());
     }
     
-    public void inserir(int valor){  //Insere um novo valor na árvore
+    public void inserir(int valor){
         inserir(this.raiz, valor);
     }
     
-    public void inserir(Node node, int valor) {  //Método que determina o local de um novo valor na árvore
+    public void inserir(Node node, int valor) {
         if(this.raiz == null){
             this.raiz = new Node(valor);
         } else {
@@ -90,15 +90,18 @@ public class Arvore{
         }
     }
     
-    public void busca(int x){  //Busca um valor na árvore  
-    	busca(this.raiz, x);  
+    public void busca( int x  )  
+    {  
+        buscaAjudante( this.raiz , x  );  
+        
     }  
 
-    
-    int contador = 0; // variavél para controlar o nivel da árvore 
-    
-    // Método para percorrer a arvoré e achar o elemento
-    public void busca ( Node no , int x ){  
+    int contador = 0; // variavél para controlar o nivel da arvoré  
+
+    // Método para percorrer a arvoré e achar o elemento  
+
+    public void buscaAjudante ( Node no , int x )  
+    {  
 
         if ( no == null )  
         {  
@@ -113,7 +116,7 @@ public class Arvore{
            if ( no != null )  
            {  
                contador ++;  
-               busca( no.getLeft() , x );  
+               buscaAjudante( no.getLeft() , x );  
            }  
 
         }  
@@ -122,14 +125,35 @@ public class Arvore{
             if( no != null )  
             {  
                 contador ++;  
-                busca(no.getRight() , x );  
+                buscaAjudante(no.getRight() , x );  
             }  
 
         }  
-        contador = 0;
     }
     
-    
+    /*
+    public Node busca(int valor) {
+        if (this.raiz == null) {
+            return null;
+        } else {
+            if (valor == this.raiz.valor) {
+                return this.raiz;
+            } else {
+                if (valor > this.raiz.valor) {
+                    if (this.arvoreDireita == null) {
+                        return null;
+                    }
+                    return this.arvoreDireita.search(valor);
+                } else {
+                    if (this.arvoreEsquerda == null) {
+                        return null;
+                    }
+                    return this.arvoreEsquerda.search(valor);
+                }
+            }
+        }
+    }
+    */
     /*
     public Node remover(int valor) throws Exception{
         return remover(this.raiz, valor);

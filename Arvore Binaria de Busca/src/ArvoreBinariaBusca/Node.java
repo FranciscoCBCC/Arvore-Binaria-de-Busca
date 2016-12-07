@@ -2,47 +2,44 @@ package ArvoreBinariaBusca;
 
 public class Node  {
 	 
-    private int valor;
-    private Node left;
-    private Node right;
+    public int valor;  //Campo para o valor
+    private Node left; //Referência para o nó anterior
+    private Node right;  //Referência para o próximo nó
     
-    public Node(){
+    public Node(){  //Construtor vazio
     	
     }
 
-    public Node(int valor) {
+    public Node(int valor) {  //Construtor com o parâmetro valor que será inserido no nó
         this.valor = valor;
     }
     
-    public boolean ehFolha() {
+    public boolean ehFolha() {  //Diz se um nó é folha
         return left == null && right == null;
     }
-    // funçoes set
-    public void setValor(Integer valor) {
+    
+    //Métodos set
+    public void setValor(int valor) {  //Seta o valor em um nó
     	this.valor = valor;
     	}
-    public void setLeft( Node left){
+    public void setLeft( Node left){  //Seta um determinado nó no campo esquerdo de outro nó
     	this.left = left;
     }
     
-    public void setright( Node right){
+    public void setright( Node right){  //Seta um determinado nó no campo direito de outro nó
     	this.right = right;
     }
     
-    // funçoes get
-    public int getValor() {
+    //Métodos get
+    public int getValor() {  //Retorna um valor de um nó
         return valor;
     }
 
-    public Node getLeft() {
+    public Node getLeft() {  //Retorna o nó que está no campo esquerdo de outro nó
         return left;
     }
 
-    public Node getRight() {
+    public Node getRight() {  //Retorna o nó que está no campo direito de outro nó
         return right;
-    }
-    
-   	
-
-   	    
+    }  	    
 }
