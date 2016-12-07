@@ -19,29 +19,24 @@ public class Main {
         do{
             menu();
             opcao = entrada.nextInt();
-            Scanner pause = new Scanner(System.in);
             
             switch(opcao){             
             	case 1:
             		System.out.println("Digite o valor  ser inserido:");
             		int valor = 0;
             		Scanner inserirValor = new Scanner(System.in);
-            		valor = inserirValor.nextInt();
             		arvoreBinBusca.inserir(valor);
             		break;
                 
             	case 2:
             		arvoreBinBusca.imprimirArvore();
-            		pause.nextLine();
             		break;
             		
             	case 3:
             		System.out.println("Buscar não implementado");
-            		pause.nextLine();
-                    break;               	
+                                    	
             	default:
             		System.out.println("Opção inválida");
-            		pause.nextLine();
             		break;
             }            
         }while(true);

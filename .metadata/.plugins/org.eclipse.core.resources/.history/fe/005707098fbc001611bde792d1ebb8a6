@@ -19,7 +19,6 @@ public class Main {
         do{
             menu();
             opcao = entrada.nextInt();
-            Scanner pause = new Scanner(System.in);
             
             switch(opcao){             
             	case 1:
@@ -32,16 +31,13 @@ public class Main {
                 
             	case 2:
             		arvoreBinBusca.imprimirArvore();
-            		pause.nextLine();
             		break;
             		
             	case 3:
             		System.out.println("Buscar não implementado");
-            		pause.nextLine();
                     break;               	
             	default:
             		System.out.println("Opção inválida");
-            		pause.nextLine();
             		break;
             }            
         }while(true);
